@@ -1,0 +1,2 @@
+.terraform/providers/registry.terraform.io/azure/azapi/1.15.0/windows_amd64/terraform-provider-azapi_v1.15.0.exe filter=lfs diff=lfs merge=lfs -text
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.116.0/windows_amd64/terraform-provider-azurerm_v3.116.0_x5.exe filter=lfs diff=lfs merge=lfs -text
