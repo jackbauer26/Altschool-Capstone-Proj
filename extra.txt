@@ -1,2 +1,4 @@
 - After tf init is run, the tf.lock.hcl file is created
 - .terraform is created on itself
+- ran tf plan
+- ran tf apply
