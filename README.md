@@ -35,3 +35,9 @@ This is the next step after initializing your project file with terraform init
 > Step 4 > `terraform apply`
 
 ![Alt text](assets\assets_apply.png)
+
+> Step 5 > After creating our clusters, we need to update our kubeconfig file to be able to communicate with our clusters by using the command
+`az aks get-credentials --resource-group <rg-resource-group-name> --name <cluster-name>`
+
+These resource-group-name and cluster-name were generated at the end of your `terraform apply`
+
