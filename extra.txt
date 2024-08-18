@@ -2,3 +2,15 @@
 - .terraform is created on itself
 - ran tf plan
 - ran tf apply
+
+
+kubectl get pods,svc -n sock-shop
+Oluwasesan Oluwayemi
+1:36 PM
+helm repo add nginx https://helm.nginx.com/stable
+Oluwasesan Oluwayemi
+2:19 PM
+helm repo add jetstack https://charts.jetstack.io --force-update
+Oluwasesan Oluwayemi
+2:23 PM
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.15.2/cert-manager.yaml
