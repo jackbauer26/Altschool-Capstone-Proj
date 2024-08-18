@@ -17,7 +17,7 @@ Create a project folder in your preferred IDE, in my case, I used the VS Code an
 
 After  we type the command above, we'll be prompted to connect to our Azure Portal account which will be used to run the project as evident in the screenshot below
 
-![Alt text](assets\asset_az_login.png)
+![Alt text](.\assets\asset_az_login.png)
 
 > **Step 2** > `terraform init`
 
