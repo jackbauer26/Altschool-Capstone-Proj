@@ -62,9 +62,9 @@ The deployment will be achieved with the following comand `kubectl apply -f sock
 
 ![Alt text](assets/assets_running_pods.png)
 
-> Now we have our External-IP. With this, we can map our domain name [ **ibraheem-alade.me** ] in my case. The IP can be seen in the image above and the domain and IP mapping can be seen below
+> Now we have our External-IP. With this, we can map our domain name [ **ibraheem-alade.me** ] in my case. The IP can be seen in the image above and the domain and IP mapping can be seen below.
 
-![Alt text](assets/assets_nameCheap_adv_DNS_pg.png)
+
 
 > **Step 8** > Next, let us now apply our ingress rule so that we can able to access our application using our domain name on the browser, we would be using this command `kubectl apply -f main-ingress.yaml`
 
