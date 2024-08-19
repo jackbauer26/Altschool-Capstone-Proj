@@ -106,3 +106,4 @@ Ensure your main Ingress is correctly annotated with your TLS settings.
 > To check the status of your certificate, use the command `kubectl get certificate -n sock-shop`. If successful, the status will be displayed as “True”.
 
 ![Alt text](assets/assets_cert_status.png)
+
