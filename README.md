@@ -107,3 +107,7 @@ Ensure your main Ingress is correctly annotated with your TLS settings.
 
 ![Alt text](assets/assets_cert_status.png)
 
+> At this point we can expect to see our certificate details on our page
+
+![Alt text](assets/assets_cert_details.png)
+

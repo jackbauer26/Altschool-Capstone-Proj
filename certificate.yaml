@@ -10,4 +10,5 @@ spec:
     kind: ClusterIssuer
   commonName: www.ibraheem-alade.me
   dnsNames:
+  - ibraheem-alade.me
   - www.ibraheem-alade.me
