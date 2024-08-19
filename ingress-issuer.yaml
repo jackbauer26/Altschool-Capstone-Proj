@@ -12,7 +12,7 @@ spec:
     email: bauerautocad@gmail.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt-nginx-private-key
+      name: alade-nginx
     solvers:
       # Use the HTTP-01 challenge provider
       - http01:
