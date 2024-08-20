@@ -107,7 +107,52 @@ Ensure your main Ingress is correctly annotated with your TLS settings.
 
 ![Alt text](assets/assets_cert_status.png)
 
+> We can view the certificate description using the command below
+`kubectl describe certificate ibraheem-certificate -n sock-shop`
+
+![Alt text](assets/assets_describe_issued_certificate.png)
+
 > At this point we can expect to see our certificate details on our page
 
 ![Alt text](assets/assets_cert_details.png)
+
+
+## STAGE 3
+Next is to install our Monitoring and Logging tools. In this project, we'll use Prometheus to log our calls and Grafana for activity monitoring. 
+
+> Let's start by adding the prometheus-community to our repository by using the command `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts` and of course `helm repo update` afterwards.
+
+
+![Alt text](assets/assets_add_prome_community.png)
+
+> We would now search the repo using `helm search repo prometheus`. 
+
+> Then we would install `helm install prome prometheus-community/kube-prometheus-stack -n sock-shop`. 
+
+![Alt text](assets/assets_prometheus_installed.png).
+
+> Once it is installed successfully, you can do `kubectl get pods,svc -n sock-shop` and look for the pod name that contains grafana. It will be something like **prome-grafana-xxxxx.**. We are searching the sock-shop namespace because we deployed it in the sock-shop namespace
+
+![Alt text](assets/assets_prom_grafana_pod_name_img.png)
+
+> To gain access into our grafana dashboard, we have to run the following command as listed below to get the username and password that is needed.
+- `kubectl describe pod prome-grafana-7745f88fd6-dbqsw -n sock-shop`
+
+- `kubectl get secret <secret-name> -n sock-shop -o jsonpath="{.data.admin-user}" | base64 --decode`
+
+- `kubectl get secret <secret-name> -n sock-shop -o jsonpath="{.data.admin-password}" | base64 --decode`
+
+By running the above codes, then we can generate our grafana username and password.
+
+> Our next action is to update our ingress configuration file by running the command `kubectl apply -f main-ingress.yaml`
+
+![Alt text](assets/assets_final_updated_ingress_config_file.png)
+
+> We can now proceed to open our browser and enter the our mapped grafana account then log in with the username and password generated above
+
+![Alt text](assets/assets_grafana_dash_img.png)
+
+> We can launch our prometheus as well, however by default it does not have any login credential
+
+![Alt text](assets/assets_prometheus_dashboard.png)
 

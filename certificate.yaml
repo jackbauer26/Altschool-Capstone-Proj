@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ibraheem-certificate
+  name: ibraheem-new-cert  # Update to your desired certificate name
   namespace: sock-shop
 spec:
-  secretName: alade-nginx
-  issuerRef: 
+  secretName: alade-nginx-secret  # Update to your desired secret name
+  issuerRef:
     name: letsencrypt-nginx
     kind: ClusterIssuer
   commonName: www.ibraheem-alade.me
